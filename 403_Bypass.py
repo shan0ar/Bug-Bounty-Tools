@@ -55,7 +55,7 @@ def sendHeaders(url, path):
 	print("Response code: {}   Response length: {}   Header: X-Original-URL: {}\n".format(resp.status_code, len(resp.text), headers["X-Original-URL"]))
 	headers.pop("X-Original-URL")
 
-  	headers["X-Rewrite-URL"] = path
+	headers["X-Rewrite-URL"] = path
 	resp = requests.get(url, headers=headers, verify=False)
 	print("Response code: {}   Response length: {}   Header: X-Rewrite-URL: {}\n".format(resp.status_code, len(resp.text), headers["X-Rewrite-URL"]))
 	headers.pop("X-Rewrite-URL")
