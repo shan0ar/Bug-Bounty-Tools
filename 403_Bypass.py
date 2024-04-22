@@ -4,7 +4,7 @@ import sys, argparse, logging, requests
 requests.packages.urllib3.disable_warnings()
 
 parser = argparse.ArgumentParser(
-description="use this script to fuzz endpoints that return a 401/403"
+description="use this script to fuzz endpoints when the response is 401/403"
 )
 parser.add_argument('--url','-u', action="store", default=None, dest='url',
 	help="Specify the target URL")
